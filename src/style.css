@@ -1,0 +1,75 @@
+body {
+    margin: 0px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+/* upper nav section  */
+
+.nav-ult {
+    display: flex;
+    background-color: rgb(33, 50, 97);
+    color: rgb(240, 240, 240);
+    font-size: 1.3rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title {
+    padding-left: 30px;
+    font-size: 32px;
+}
+
+.nav-btns li {
+    list-style: none;
+    display: inline;
+    margin: 10px
+}
+
+.nav-btns {
+    padding-right: 30px;
+}
+
+/* hero section  */
+
+.hero-section {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: rgb(240, 240, 240);
+    color: rgb(33, 50, 97)
+}
+
+.hero-text {
+    font-size: 40px;
+    width: 400px;
+}
+.hero-section img {
+    width: 400px;
+}
+
+/* contact part of the home page  */
+
+.contact-part {
+    height: 200px;
+    background-color: antiquewhite;
+    color:brown;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 33px;
+}
+
+/* footer section  */
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
