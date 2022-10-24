@@ -14,7 +14,7 @@ module.exports = {
             title: 'Fancy Frogs Restaurant',
         })
     ],
-    rules: [
+    module: {rules: [
         {
             test: /\.css$/i,
             use: ['style-loader','css-loader']
@@ -23,5 +23,5 @@ module.exports = {
             test: /\.(png|jpg|jpeg|svg|gif)$/i,
             type: 'asset/resource'
         }
-    ]
+    ]}
 }
