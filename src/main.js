@@ -27,6 +27,8 @@ import frogImage from './original.jpg';
     li2.innerHTML = 'Menu';
     let li3 = document.createElement('li');
     li3.innerHTML = 'Contact Us';
+    li1.onclick = homePage;
+    li2.onclick = menuPage;
     nav_btns.appendChild(li1)
     nav_btns.appendChild(li2)
     nav_btns.appendChild(li3)
@@ -42,35 +44,54 @@ import frogImage from './original.jpg';
     footer_div.innerHTML = 'Made by Abdulrahman Almajdalawi';
     bdy.appendChild(footer_div);
 
+    let HOME_STATUS = false;
+    let MENU_STATUS = false;
+    let CONTACT_STATUS = false;
+
     homePage();
+    
     function homePage() {
-        let hero_section = document.createElement('div');
-        hero_section.classList.add('hero-section');
-        div_id.appendChild(hero_section);
+        if (!HOME_STATUS) {
+            HOME_STATUS = true;
+            MENU_STATUS = false;
+            CONTACT_STATUS = false;
+            div_id.innerHTML = '';
 
-        let hero_text=  document.createElement('div');
-        hero_text.innerHTML = "Discover the best type of poison you'll ever lay your eyes on! This is killer stuff right here bois!";
-        hero_text.classList.add('hero-text');
+            let hero_section = document.createElement('div');
+            hero_section.classList.add('hero-section');
+            div_id.appendChild(hero_section);
+    
+            let hero_text=  document.createElement('div');
+            hero_text.innerHTML = "Discover the best type of poison you'll ever lay your eyes on! This is killer stuff right here bois!";
+            hero_text.classList.add('hero-text');
+            
+            let hero_image = document.createElement('div');
+            hero_image.classList.add('hero-image');
+            let someImg = new  Image();
+            someImg.src = frogImage;
+            someImg.classList.add('frog-hero-image');
+            hero_image.appendChild(someImg);
+    
+            hero_section.appendChild(hero_text);
+            hero_section.appendChild(hero_image);
+            
+            let contact_part = document.createElement('div');
+            contact_part.classList.add('contact-part');
+            contact_part.innerHTML = 'Click here to contact Us!';
+            div_id.appendChild(contact_part);
         
-        let hero_image = document.createElement('div');
-        hero_image.classList.add('hero-image');
-        let someImg = new  Image();
-        someImg.src = frogImage;
-        someImg.classList.add('frog-hero-image');
-        hero_image.appendChild(someImg);
-
-        hero_section.appendChild(hero_text);
-        hero_section.appendChild(hero_image);
+        }
         
-        let contact_part = document.createElement('div');
-        contact_part.classList.add('contact-part');
-        contact_part.innerHTML = 'Click here to contact Us!';
-        div_id.appendChild(contact_part);
-
     }
 
     function menuPage() {
-
+        if(!MENU_STATUS) {
+            HOME_STATUS = false;
+            MENU_STATUS = true;
+            CONTACT_STATUS = false;
+            
+            div_id.innerHTML = ""
+        }
     }
 
     function contactPage() {
